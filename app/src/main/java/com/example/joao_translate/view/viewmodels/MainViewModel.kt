@@ -9,7 +9,7 @@ import com.example.joao_translate.domain.TranslateBusiness
 import com.example.joao_translate.model.PatternLanguage
 
 class MainViewModel : ViewModel() {
-    val translateBusiness = TranslateBusiness()
+    private val translateBusiness = TranslateBusiness()
     var isLoading by mutableStateOf(false)
     var firstField by mutableStateOf(PatternLanguage.INGLES)
     var secondField by mutableStateOf(PatternLanguage.PORTUGUÊS)
