@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Joao_translate" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/purple_700</item>
+    </style>
+
+    <style name="Theme.Joao_translate.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="statusBarBackground">#ff454545</item>
+        <item name="android:navigationBarColor">#ff454545</item>
+    </style>
+
+    <style name="Theme.Joao_translate.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Joao_translate.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
