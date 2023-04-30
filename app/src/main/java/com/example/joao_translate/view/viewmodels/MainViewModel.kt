@@ -16,7 +16,6 @@ class MainViewModel @Inject constructor(private val translateBusiness:TranslateB
     var secondField by mutableStateOf(PatternLanguage.PORTUGUÊS)
     var textForTranslate by mutableStateOf("")
     var textTranslated by mutableStateOf("")
-
     fun getTextTranslated() {
         isLoading = true
         if (textForTranslate.isNotBlank() && textForTranslate.isNotEmpty()){

@@ -2,13 +2,11 @@ package com.example.joao_translate.domain
 
 import com.example.joao_translate.model.PatternLanguage
 import com.example.joao_translate.network.Repository
-import dagger.hilt.android.scopes.ViewModelScoped
 import org.json.JSONObject
 import javax.inject.Inject
 
-
 class TranslateBusiness @Inject constructor(private val repository: Repository) {
-    fun getTranslatedText(text: String, langpair: Pair<PatternLanguage, PatternLanguage>, cb:(String)->Unit) {
+      fun getTranslatedText(text: String, langpair: Pair<PatternLanguage, PatternLanguage>, cb:(String)->Unit) {
         repository.getData(
             text,
             convertPairToISO(langpair),

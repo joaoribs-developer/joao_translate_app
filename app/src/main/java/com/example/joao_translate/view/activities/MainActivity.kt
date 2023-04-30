@@ -32,9 +32,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.joao_translate.R
 import com.example.joao_translate.model.PatternLanguage
+import com.example.joao_translate.network.ApiService
+import com.example.joao_translate.network.Repository
 import com.example.joao_translate.view.components.TransparentLoadScreen
 import com.example.joao_translate.view.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {

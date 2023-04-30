@@ -9,6 +9,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import javax.inject.Inject
 
+
 class Repository @Inject constructor(private val retrofit: ApiService) {
     @Suppress("UNCHECKED_CAST")
     fun getData(
