@@ -34,9 +34,11 @@ import com.example.joao_translate.R
 import com.example.joao_translate.model.PatternLanguage
 import com.example.joao_translate.view.components.TransparentLoadScreen
 import com.example.joao_translate.view.viewmodels.MainViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
-    val mainViewModel by viewModels<MainViewModel>()
+    private val mainViewModel by viewModels<MainViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         window.statusBarColor = Color(0xff454545).hashCode()
         super.onCreate(savedInstanceState)

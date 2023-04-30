@@ -2,14 +2,14 @@ package com.example.joao_translate.domain
 
 import com.example.joao_translate.model.PatternLanguage
 import com.example.joao_translate.network.Repository
-import com.google.gson.Gson
-import com.google.gson.JsonObject
-import com.google.gson.JsonParser
+import dagger.hilt.android.scopes.ViewModelScoped
 import org.json.JSONObject
+import javax.inject.Inject
 
-class TranslateBusiness {
+
+class TranslateBusiness @Inject constructor(private val repository: Repository) {
     fun getTranslatedText(text: String, langpair: Pair<PatternLanguage, PatternLanguage>, cb:(String)->Unit) {
-        Repository.getData(
+        repository.getData(
             text,
             convertPairToISO(langpair),
             onSucesso = {

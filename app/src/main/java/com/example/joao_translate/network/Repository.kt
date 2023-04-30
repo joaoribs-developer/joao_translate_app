@@ -2,17 +2,14 @@ package com.example.joao_translate.network
 
 import com.example.joao_translate.network.ConvertFactory.linkedTreeMapToJsonObject
 import com.google.gson.Gson
-import com.google.gson.JsonObject
-import com.google.gson.JsonParser
 import com.google.gson.internal.LinkedTreeMap
 import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-object Repository {
-    private val retrofit = RetrofitFactory.getRetrofitInstance()
-
+class Repository @Inject constructor(private val retrofit: ApiService) {
     @Suppress("UNCHECKED_CAST")
     fun getData(
         text: String,

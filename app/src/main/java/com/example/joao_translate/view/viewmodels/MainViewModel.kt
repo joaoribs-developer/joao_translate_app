@@ -3,13 +3,14 @@ package com.example.joao_translate.view.viewmodels
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.joao_translate.domain.TranslateBusiness
 import com.example.joao_translate.model.PatternLanguage
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class MainViewModel : ViewModel() {
-    private val translateBusiness = TranslateBusiness()
+@HiltViewModel
+class MainViewModel @Inject constructor(private val translateBusiness:TranslateBusiness): ViewModel() {
     var isLoading by mutableStateOf(false)
     var firstField by mutableStateOf(PatternLanguage.INGLES)
     var secondField by mutableStateOf(PatternLanguage.PORTUGUÊS)
