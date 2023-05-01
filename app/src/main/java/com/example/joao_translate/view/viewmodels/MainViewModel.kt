@@ -11,14 +11,16 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(private val translateBusiness:TranslateBusiness): ViewModel() {
+
     var isLoading by mutableStateOf(false)
     var firstField by mutableStateOf(PatternLanguage.INGLES)
     var secondField by mutableStateOf(PatternLanguage.PORTUGUÊS)
     var textForTranslate by mutableStateOf("")
     var textTranslated by mutableStateOf("")
+
     fun getTextTranslated() {
-        isLoading = true
         if (textForTranslate.isNotBlank() && textForTranslate.isNotEmpty()){
+            isLoading = true
            translateBusiness.getTranslatedText(
                 textForTranslate,
                 Pair(firstField, secondField)
@@ -28,6 +30,7 @@ class MainViewModel @Inject constructor(private val translateBusiness:TranslateB
             }
         }
     }
+
     fun invertFields(){
         val lastFirstField = firstField
         firstField = secondField

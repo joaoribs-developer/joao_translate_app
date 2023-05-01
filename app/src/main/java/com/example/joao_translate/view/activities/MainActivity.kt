@@ -2,7 +2,6 @@ package com.example.joao_translate.view.activities
 
 import android.content.ClipData
 import android.content.ClipboardManager
-import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -20,7 +19,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -32,12 +30,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.joao_translate.R
 import com.example.joao_translate.model.PatternLanguage
-import com.example.joao_translate.network.ApiService
-import com.example.joao_translate.network.Repository
 import com.example.joao_translate.view.components.TransparentLoadScreen
 import com.example.joao_translate.view.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -46,8 +41,6 @@ class MainActivity : ComponentActivity() {
         window.statusBarColor = Color(0xff454545).hashCode()
         super.onCreate(savedInstanceState)
         setContent {
-
-            // A surface container using the 'background' color from the theme
             Surface(
                 modifier = Modifier.fillMaxSize(),
                 color = Color(0xff454545)
@@ -56,7 +49,6 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-
 
     @Composable
     fun MainContent() {

@@ -1,8 +1,6 @@
 package com.example.joao_translate.di
 
-import com.example.joao_translate.domain.TranslateBusiness
 import com.example.joao_translate.network.ApiService
-import com.example.joao_translate.network.Repository
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
